@@ -1,0 +1,145 @@
+/* Scrollable Tabs */
+.category-tabs {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0.75rem 1rem;
+    background-color:#eee0b9;
+    border-bottom: 2px solid #ccc;
+    gap: 0.75rem;
+    scrollbar-width: none;
+    margin-top: 50px;
+  }
+  .category-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .tab {
+    flex: 0 0 auto;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color:#eee0b9;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .tab.active {
+    background-color: #eee0b9;
+    color: white;
+  }
+  
+  /* Grid for Menu Cards */
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  @media (max-width: 992px) {
+    .menu-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .menu-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .menu-card {
+    background-color:#eee0b9;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    border: 1px solid #eee;
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .menu-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .menu-price {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  button.active {
+    background-color: #0e4e95;
+    color: white;
+    font-weight: bold;
+  }
+  .category-scroll {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+  .category-button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5ad6f5;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    &:hover {
+      background-color: #20bbf8;
+      box-shadow: 2px 2px 6px rgba(236, 80, 80, 0.1);
+      transform: scale(1.05); // subtle hover pop
+
+      
+    }
+  
+    &.active {
+      background-color: #b5e3f5;
+      transform: scale(1.15); // pop effect
+      z-index: 1;
+    }
+  }
+  
+  .content-spacing {
+    margin-top: 75px;
+    margin-bottom: 100px;
+  }
+  
+  .menu-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    word-wrap: break-word;
+  }
+  
+  .item-name {
+    flex: 1;
+    min-width: 0;
+    word-break: break-word;
+  }
+  
+  .item-price {
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  

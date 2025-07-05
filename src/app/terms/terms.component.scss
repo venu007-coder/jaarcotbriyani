@@ -1,0 +1,26 @@
+.custom-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    font-size: 18px;
+    position: relative;
+    padding-left: 25px;
+    /* Adjust padding to fit the icon */
+}
+
+.custom-list li::before {
+    content: "\f3a5";
+    /* Unicode for Font Awesome check-circle */
+    font-family: "Font Awesome 5 Free";
+    /* Use appropriate Font Awesome version */
+    font-weight: 900;
+    /* Use '900' for solid icons, '400' for regular */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    /* Adjust icon size */
+    color: #DC143C;
+}
